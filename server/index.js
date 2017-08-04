@@ -21,8 +21,8 @@ app.post('/', function (req, res) {
 
   // message to send back to slack channel - format later
   const data = {
-    response_type: 'in_channel', // public to the channel - make ethereal
-    text: 'thanks for the scoop! '
+    response_type: 'ephemeral', // public to the channel - make ethereal
+    text: '🍦🗞 Thanks for the scoop! 🍦🗞'
   };
 
   // slack needs a response within 2000ms
@@ -34,7 +34,7 @@ app.post('/', function (req, res) {
 
       const
         $ = cheerio.load(html),
-        title = $('title').text().replace(/\s+/g, " ").split(/(?=\s)/gi).slice(0, 5).join(''),
+        title = $('title').text(), // will be as long as title, just change in firebase if too long
         today = new Date(),
         date = `${(today.getMonth() + 1)}-${today.getDate()}-${today.getFullYear()}`;
 
