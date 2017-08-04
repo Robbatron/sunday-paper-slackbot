@@ -21,7 +21,7 @@ class Header extends Component {
             <header>{this.props.title}</header>
           </div>
 
-          <div className="subhead">Phoenix, AZ - Sunday July 9, 2017</div>
+          <div className="subhead">Phoenix, AZ - {new Date().toDateString()}</div>
         </div>
       </div>
     )

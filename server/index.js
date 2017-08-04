@@ -4,7 +4,6 @@ const request = require('request');
 const cheerio = require('cheerio');
 const { URL } = require('url');
 const firebase = require('firebase');
-const config = require('./components/firebase');
 const http = require('http');
 const bodyParser = require("body-parser");
 
@@ -70,6 +69,16 @@ app.post('/', function (req, res) {
 
         // author - just use username of submitter
         const author = req.body.user_name;
+
+        // initialize Firebase
+        const config = {
+          apiKey: "AIzaSyAGoW6bQZPIHhl3F1BJ193L18zCJIB3YL4",
+          authDomain: "sundaypaper-935e0.firebaseapp.com",
+          databaseURL: "https://sundaypaper-935e0.firebaseio.com",
+          projectId: "sundaypaper-935e0",
+          storageBucket: "sundaypaper-935e0.appspot.com",
+          messagingSenderId: "365673062936"
+        };
 
         // only initialize if there is not an existing firebase instance
         firebase.apps.length === 0 && firebase.initializeApp(config);
