@@ -1,4 +1,4 @@
-import firebase from 'firebase' 
+import firebase from 'firebase'
 
 const config = {
   apiKey: "AIzaSyAGoW6bQZPIHhl3F1BJ193L18zCJIB3YL4",
@@ -7,7 +7,7 @@ const config = {
   projectId: "sundaypaper-935e0",
   storageBucket: "sundaypaper-935e0.appspot.com",
   messagingSenderId: "365673062936"
-} 
-firebase.initializeApp(config) 
+}
+firebase.initializeApp(config)
 
-export default firebase 
+export default firebase
