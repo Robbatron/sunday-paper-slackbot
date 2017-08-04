@@ -46,7 +46,7 @@ class App extends Component {
         <Header title="The Trilogy Times" weather={true} />
         <Masonry>
           {
-            this.state.articles.map((d, i) => {
+            this.state.articles.slice(0).reverse().map((d, i) => {
               return (
                 <Card
                   key={i}
