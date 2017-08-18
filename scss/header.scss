@@ -5,17 +5,20 @@ header {
   text-transform: uppercase;
   display: inline-block;
   line-height: 72px;
-  margin-bottom: 20px; }
+  margin-bottom: 20px;
+}
 
 .head {
   text-align: center;
-  position: relative; }
+  position: relative;
+}
 
 .subhead {
   text-transform: uppercase;
   border-bottom: 2px solid #2f2f2f;
   border-top: 2px solid #2f2f2f;
-  padding: 12px 0 12px 0; }
+  padding: 12px 0 12px 0;
+}
 
 .weatherforecastbox {
   position: relative;
@@ -25,4 +28,12 @@ header {
   padding: 10px 15px 10px 15px;
   line-height: 20px;
   display: inline-block;
-  margin: 0 50px 20px -360px; }
+  margin: 0 50px 20px -360px;
+}
+
+// header {
+//   margin-bottom: 0px;
+//   font-size: 60px;
+//   line-height: 54px;
+//   overflow: hidden;
+// }

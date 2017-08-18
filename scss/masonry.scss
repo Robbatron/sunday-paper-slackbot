@@ -1,0 +1,16 @@
+@import 'foundation';
+@include foundation-grid;
+
+
+.masonry-wrapper {
+	.column {
+		@include breakpoint(large up) { 
+			width: 21%;
+		}
+	}
+//   margin: 0.9375rem 1.5625rem;
+//   > div {
+//   	// margin: 2rem 1rem;
+//   }
+}
+

@@ -4,11 +4,11 @@ import '../css/card.css'
 class Card extends Component {
   render() {
     return (
-      <div>
-        <a className="articleUrl" target="_blank" href={this.props.url}>
-          <div className="card">
+    <div className="column column-block">
+        <a className="articleUrl card" target="_blank" href={this.props.url}>
             <div className="picture">
-              <img src={this.props.picture} alt="" /></div>
+              <img src={this.props.picture} alt="" />
+            </div>
             <div className="content">
               <div className="border-wrapper">
                 <h3>
@@ -21,9 +21,8 @@ class Card extends Component {
                 </div>
               </div>
             </div>
-          </div>
         </a>
-      </div>
+    </div>
     )
   }
 }

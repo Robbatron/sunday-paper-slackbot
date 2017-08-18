@@ -1,6 +1,6 @@
 import React, { Component } from 'react' 
 import ReactMasonry from 'react-masonry-component' 
-import Gutter from './gutter.js' 
+// import Gutter from './gutter.js' 
 import '../css/masonry.css' 
 
 const masonryOptions = {
@@ -13,17 +13,15 @@ const masonryOptions = {
 class Masonry extends Component {
   render() {
     return (
-      <div>
-        <div className="masonry-wrapper">
+        <div className="masonry-wrapper ">
           <ReactMasonry
-            className={'masonry-wrapper'}
+            className={'masonry-wrapper row small-up-2 medium-up-3 large-up-4'}
             options={masonryOptions}
           >
-            <Gutter />
+
             {this.props.children}
           </ReactMasonry>
         </div>
-      </div>
     )
   }
 }

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../css/gutter.css';
+// import '../css/gutter.css';
 
 class Gutter extends Component {
   render() {

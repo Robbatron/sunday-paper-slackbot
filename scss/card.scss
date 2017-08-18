@@ -1,0 +1,130 @@
+@import 'foundation';
+
+
+.articleUrl {
+  text-decoration: none;
+  &:hover { text-decoration: underline;}
+}
+
+.card {
+  display: block;
+  // !important is bad, but so is inlining you styles so clearly
+  // all "rules" have already been thrown out...
+  position: initial !important; 
+  width: 100%;
+  // float: left;
+  
+  // /* small = 1 card per row */
+  @include breakpoint(medium down)  { 
+    margin: 1rem 30%;
+    min-width: 400px;  
+    // width: 80%; 
+  }
+  // @include breakpoint(medium up) { 
+  //   // margin: 1rem 2em;
+  //   width: 40%; 
+  //   min-width: 300px;  
+  // }
+  // @include breakpoint(large up) { 
+  //   width: 20%; 
+  //   min-width: 300px; 
+  // }
+
+  * {position: relative; right:5px;}
+
+  &:hover {cursor: pointer;}
+  &:hover .picture * {
+    filter: brightness(100%) saturate(100%) contrast(100%);
+    transition: filter 0.5s ease-in-out;
+  }
+  &:hover .content {
+    border-left: solid 7px #688fdf;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .picture {
+    z-index: 1;
+    border-top-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    overflow: hidden;
+  }
+
+  .picture * {
+    filter: brightness(85%) saturate(5%) contrast(105%);
+    display: block;
+    width: 100%;
+  }
+  .picture img {
+    @include breakpoint(small up) {
+      width: 98%;
+    }
+    @include breakpoint(large up) {
+      max-height: 200px;
+      max-width: 300px;
+      width: 96%;
+      padding-left: 5px;
+    }
+  }
+
+  .content {
+    display: block;
+    background-color: #f2f2f2;
+    padding: 0.9375rem;
+    border-left: solid 7px #dfc568;
+    box-shadow: 12px -1px 15px rgba(46, 46, 46, 0.1), 2px 3px 27px rgba(46, 46, 46, 0.15);
+    z-index: 2;
+    margin-top: 1px;
+    // margin-bottom: 1.25rem;
+    left: -0.625rem;
+
+    * {color: black;}
+    img {
+
+    }
+    .content .border-wrapper {
+      margin: 0.625rem 0;
+      padding: 0.9375rem 0;
+      border: solid 1px #2e2e2e;
+      border-left-width: 0;
+      border-right-width: 0;
+    }
+    h3 {
+      font-family: "Cardo", Georgia, Times, serif;
+      font-weight: bold;
+      font-size: 1.375rem;
+      letter-spacing: 0.06563rem;
+      margin-bottom: 0.625rem;
+    }
+    span {
+      font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 0.90625rem;
+    }
+    .desc {
+      line-height: 1.35;
+      letter-spacing: 0.1px;
+    }
+
+    // Meta styles
+    .meta {
+      font-family: "Cardo", Georgia, Times, serif;
+      margin-top: 1.25rem;
+      font-size: 0.8125rem;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+    }
+    .meta *:hover {
+      text-decoration: underline;
+    }
+    .meta .author {
+      float: left;
+      /*color: #919191;*/
+    }
+    .meta .date {
+      float: right;
+      font-style: italic;
+      color: #797979;
+    }
+  }
+} // End Card
+
